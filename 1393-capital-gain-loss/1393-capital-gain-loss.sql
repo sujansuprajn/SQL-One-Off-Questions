@@ -1,6 +1,6 @@
 select stock_name , sum(
     case when operation = "Buy" then -price
-    when operation = "sell" then price
+    else price
     end
 )as capital_gain_loss
 
